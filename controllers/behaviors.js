@@ -1,9 +1,9 @@
-// controllers
+// CONTROLLERS
 const express = require('express')
 const router = express.Router()
 const Behavior = require('../models/behaviors.js')
 
-//SEED
+// SEED
 router.get('/seed', (req, res) => {
   Behavior.remove({}, () => {
     Behavior.create([
@@ -22,7 +22,7 @@ router.get('/seed', (req, res) => {
         title: 'Aggressive Behavior',
         description: "A cat may become aggressive for all kinds of reasons, including illness, overcrowding, lack of socialization, maternal protection, even simple play.",
         treatment: "Discuss your cat’s aggression with your vet. Pain and sickness can put anyone in a bad mood, so you'll want to rule out any physical causes for kitty's bad temper before you do anything else. If your furry household is often in a snit, it could be because there aren’t enough resources to go around. Keep the peace by making sure there are enough litter boxes, food and water bowls, toys, beds and perches, then spread them through the house to reduce congestion.",
-        img:''
+        img:'https://icatcare.org/sites/default/files/kcfinder/images/images/aggressive-cat_0.jpg'
       }, {
         title: 'Chewing',
         description: "Cats are not known to be the voracious chewers that dogs can be. Yet some still manage to do quite a bit of damage with their teeth. Chewing behavior in your cat may be caused by boredom, aggression, a nutritional deficiency, teething in kittens, or having been weaned too young. It might also simply be because your cat is playing or likes the texture or taste of the item.",
@@ -30,26 +30,26 @@ router.get('/seed', (req, res) => {
         "Play with your cat for at least 10 minutes twice a day. Use dangly toys, balls, catnip toys, wadded up paper -- the sky's the limit." +
         "Don't encourage your cat to play with your hands or feet. Kittens who grow up playing with and nibbling on fingertips often grow up to be powerful cats who play bite -- hard!" +
         "Don't punish your cat for play bites -- it's easy for kitty to interpret a slap as rough play, or to become afraid of you.",
-        img:''
+        img:'https://www.worldsbestcatlitter.com/WBCL/wp-content/uploads/2013/12/cat-behavior-blog-image.jpg'
       }, {
         title: 'Obsessive-Compulsive Licking',
         description: "Chronic licking in cats typically stems from pain or stress and anxiety. While all cats lick themselves, excessive licking may be serious and should be addressed without delay." +
         "A cat that's in pain may lick an area on its body until it's hairless and raw—and it isn’t always in the area that's causing pain. A stressed or anxious cat may lick its belly until it has no fur or obsessively overgroom other parts of its body.",
         treatment: "If you and your vet determine that there is no physical cause for your pet's behaviors, there are things you can do to improve your cat’s state of mind. Making sure your cat feels safe, loved, and comfortable in your home is important, as is providing adequate stimulation and exercise. You may find that desensitizing your cat by slowly and carefully exposing her to things she fears can be beneficial. Be careful to take baby steps if you try this so as not to overwhelm your cat and make the compulsive licking worse." +
         "Counter-conditioning, by training your cat to associate something pleasurable, like a treat, with something he fears may also help reduce stress and anxiety. Many times, boredom licking (also known as psychogenic alopecia) is improved by adding another cat or pet. But, there is always the risk that the second cat could be a new stress in your pet's environment that could make the hair loss worse.",
-        img:''
+        img:'https://www.readersdigest.ca/wp-content/uploads/sites/14/2016/05/7-reasons-cats-clean-themselves-so-much.jpg'
       }, {
         title: 'Too much nighttime activity',
         description: "Until their domestication cats were nocturnal by nature, so it's easy to see why too much nighttime action is a common complaint of many new pet parents. To help the kitty who doesn't understand that nighttime is for sleeping -- not for playing with your nose.",
         treatment: "First, make sure your cat has no medical problems. An agitated, active feline could be one that's in pain, so talk to your vet if you think there might be something wrong." +
         "If kitty is just rambunctious at night, you can help tire and relax her with a good play session before bedtime." +
         "Make sure kitty's environment is enriched so there is plenty to do during the day, making your cat more inclined to sleep at night. You might create a cat enclosure; offer your cat a variety of toys; mount bird or squirrel feeders near a window out which kitty can see; or leave out items for your cat to explore, such as boxes, bags, and packing paper.",
-        img: ''
+        img: 'https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/LWMPlNc/two-cute-domestic-shorthair-tabby-kittens-cats-playing-with-feline-toy_bw91ebii__F0011.png'
       }, {
         title: 'Cats That Put The “Scared” in “Scaredy Cat.”',
         description: "Cats are independent, but they are also social creatures by nature. Your shy kitty may never be the life of the party, but your dreams of feline cuddle time may still come true.",
         treatment: "Respect your cat’s need for space. Your cat does need alone time. Provide safe, enclosed spaces that allow your cat to “hide” while still being part of the action. Try placing baskets or covered cat beds in social spaces, like the living room. If your cat can watch you from his safe space, he’ll gradually get more comfortable.",
-        img: ''
+        img: 'https://purewows3.imgix.net/images/articles/2019_06/Why-are-cats-scared-of-cucumbers-cat-hiding-under-bed.jpg?auto=format,compress&cs=strip&fit=min&w=728&h=404'
       }, {
         title: 'Chronic Stress in Cats',
         description: "Chronic stress occurs when the cat is left in a state of uncertainty. Think of a cat forced to live every day with another cat who displays constant hostility, or a cat living in an environment where the litter box conditions are dirty and unappealing. What about the cat confined to a cage in a shelter for months? Can you imagine the degree of chronic stress there? Or what about the indoor/outdoor cat who has moved to a new neighborhood and is put outside every day with no safe retreat back to the security of his home? These are just a couple of examples but there are so many other situations that could create stress.",
@@ -65,7 +65,7 @@ router.get('/seed', (req, res) => {
         "Engage your cat in daily interactive play sessions." +
         "Do gradual, positive new pet introductions." +
         "Provide good quality nutrition.",
-        img:''
+        img:'https://cf-s3.petcoach.co/thumbnails/article/uploads/articles/59/0923b56b804d33318d71d5b948ca5990f49612d8.jpeg'
       }
     ], (err, data) => {
       res.redirect('/behaviors')
@@ -73,5 +73,13 @@ router.get('/seed', (req, res) => {
   })
 })
 
+// SHOW ROUTE
+router.get('/:id', (req, res) => {
+  Behavior.findById(req.params.id, (error, foundBehavior) => {
+    res.render('behaviors/show.ejs', {
+      behavior:foundBehavior
+    })
+  })
+})
 
 module.exports = router

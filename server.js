@@ -6,7 +6,8 @@ const session = require ('express-session')
 require('dotenv').config()
 const app = express ()
 const db = mongoose.connection
-
+const Behavior = require('./models/behaviors.js')
+const Store = require('./models/stores.js')
 
 // Configuration
 // Allow use of Heroku's port or your own local port, depending on the environment
@@ -52,11 +53,25 @@ app.get('/', (req, res) => {
 
 // Behavior Page
 app.get('/behaviors', (req, res) => {
-  res.render('behaviors/index.ejs')
+  Behavior.find({}, (error, allBehaviors) => {
+    res.render('behaviors/index.ejs', {
+      behaviors:allBehaviors
+    })
+  })
 })
-// Store
 
-// Community
+// Store Page
+app.get('/stores', (req, res) => {
+  Store.find({}, (error, allStores) => {
+    res.render('stores/index.ejs', {
+      stores: allStores
+    })
+  })
+})
+
+// Adoption Page
+
+// Community Page
 app.get('/community', (req, res) => {
   if (req.session.currentUser) {
     res.render('community/index.ejs')
