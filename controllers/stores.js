@@ -43,7 +43,7 @@ router.get('/seed', (req, res) => {
         name: 'Yeowww! Organic Catnip',
         use: 'Stress Relief',
         description: "No cat’s day is complete without a pinch of Yeowww! Organic Catnip. This isn’t just any catnip — it comes from farmers that harvest the best organically grown catnip around. This high-quality signature blend contains just leaves and flower tops for the most effective catnip. It’s superior to your everyday catnip in terms of freshness, color and aroma. No chemicals or pesticides are used in cultivation, which means Yeowww! catnip is completely safe for cats and humans. Sprinkle a little on your kitty’s favorite scratcher or use it to stuff your own handmade toys.",
-        img: 'https://img.chewy.com/is/image/catalog/110661_MAIN._AC_SL1500_V1528134126_.jpg',
+        img: 'https://img.chewy.com/is/catalog/103031._AC_SL1500_V1467808856_.jpg',
         price: 5.99,
         qty: 390
       },
@@ -113,7 +113,8 @@ router.get('/seed', (req, res) => {
 router.get('/:id', (req, res) => {
   Store.findById(req.params.id, (error, foundStore) => {
     res.render('stores/show.ejs', {
-      store:foundStore
+      store:foundStore,
+      currentUser: req.session.currentUser
     })
   })
 })

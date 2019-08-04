@@ -4,12 +4,13 @@
     <% include ../partials/head.ejs %>
   </head>
   <body>
+    <% include ../partials/header2.ejs %>
     <div class="container">
       <div class="container">
-        <a href="/behaviors">Back to Behaviors Page</a>
-        <h1><%=behavior.title%></h1>
-        <img src=<%=behavior.img%> />
-        <p><%=behavior.description%></p>
+        <!-- <a href="/behaviors">Back to Behaviors Page</a> -->
+        <h3><%=behavior.title%></h3>
+        <img class="behavior-img" src=<%=behavior.img%> />
+        <p class="behavior-text container"><%=behavior.description%></p>
       </div>
     </div>
   </body>

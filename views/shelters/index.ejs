@@ -4,9 +4,10 @@
     <% include ../partials/head.ejs %>
   </head>
   <body>
+    <% include ../partials/header.ejs %>
     <div class="container">
-      <a href="/">Back to Home Page</a>
-      <h1>Adoption Centers</h1>
+      <!-- <a href="/">Back to Home Page</a> -->
+      <h3>Adoption Centers</h3>
       <div class="divider"></div>
         <% for(let i = 0; i < shelters.length; i++) { %>
           <div class= "section">

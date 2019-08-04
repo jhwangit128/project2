@@ -4,24 +4,22 @@
     <% include ../partials/head.ejs %>
   </head>
   <body>
-    <div class="container">
-      <a href="/">Back to Home Page</a>
-      <h1>Products to  help cat's behavior problems</h1>
-      <div class="row">
-        <div class= "col s12 m6">
-          <div class="card">
-            <% for(let i = 0; i < stores.length; i++) { %>
-              <div class="card-image">
+    <% include ../partials/header.ejs %>
+    <div class="outer-container">
+      <!-- <a href="/">Back to Home Page</a> -->
+      <h4>Products that can help cat's behavior problems</h4><br /><br />
+      <div class="items-container">
+        <% for(let i = 0; i < stores.length; i++) { %>
+          <div class="item-container">
+            <div class="item-image">
                 <a href="/stores/<%=stores[i].id%>"><img src=<%=stores[i].img%> /></a>
-
-              </div>
-              <div class="card-content blue-grey darken-1 white-text">
-                <span class="card-title"><%=stores[i].name%></span>
-                <span class="card-title"><%=stores[i].price%></span>
-              </div>
-            <% } %>
+            </div>
+            <div class="item-text">
+              <span class="item-name"><%=stores[i].name%></span><br />
+              <span class="item-price">$ <%=stores[i].price%></span>
+            </div>
           </div>
-        </div>
+        <% } %>
       </div>
     </div>
   </body>

@@ -58,7 +58,8 @@ app.get('/', (req, res) => {
 app.get('/behaviors', (req, res) => {
   Behavior.find({}, (error, allBehaviors) => {
     res.render('behaviors/index.ejs', {
-      behaviors:allBehaviors
+      behaviors:allBehaviors,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -67,7 +68,8 @@ app.get('/behaviors', (req, res) => {
 app.get('/stores', (req, res) => {
   Store.find({}, (error, allStores) => {
     res.render('stores/index.ejs', {
-      stores: allStores
+      stores: allStores,
+      currentUser: req.session.currentUser
     })
   })
 })
@@ -76,7 +78,8 @@ app.get('/stores', (req, res) => {
 app.get('/shelters', (req, res) => {
   Shelter.find({}, (error, allShelters) => {
     res.render('shelters/index.ejs', {
-      shelters: allShelters
+      shelters: allShelters,
+      currentUser: req.session.currentUser
     })
   })
 })

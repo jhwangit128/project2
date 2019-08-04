@@ -77,7 +77,8 @@ router.get('/seed', (req, res) => {
 router.get('/:id', (req, res) => {
   Behavior.findById(req.params.id, (error, foundBehavior) => {
     res.render('behaviors/show.ejs', {
-      behavior:foundBehavior
+      behavior:foundBehavior,
+      currentUser: req.session.currentUser
     })
   })
 })

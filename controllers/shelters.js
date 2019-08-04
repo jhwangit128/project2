@@ -11,7 +11,7 @@ router.get('/seed', (req, res) => {
         name: "PAWS Chicago: Pippen Fasseas Adoption Center",
         location: "1997 N. Clybourn Ave Chicago, IL 60614",
         description: "In a model No Kill city, all healthy and treatable animals are saved. Euthanasia is reserved only for dogs or cats who are hopelessly sick or injured and suffering, where medical treatment cannot alleviate the condition, or for dogs who are deemed dangerous and non-rehabilitatable by behavior experts who believe that they pose a real threat to public safety.",
-        map: "https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d380591.9395651292!2d-88.19586524740195!3d41.820232722330694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d41.6997376!2d-88.21719039999999!4m0!5e0!3m2!1sen!2sus!4v1564887218248!5m2!1sen!2sus",
+        map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11875.356213058953!2d-87.6587445!3d41.9178185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd0f75d030a39f577!2sPAWS+Chicago!5e0!3m2!1sen!2sus!4v1564954022075!5m2!1sen!2sus",
         img: 'http://www.pawschicago.org/fileadmin/media/images/CML_backgrounds/Fosters__2_.jpg'
       },
       {
@@ -49,7 +49,8 @@ router.get('/seed', (req, res) => {
 router.get('/:id', (req, res) => {
   Shelter.findById(req.params.id, (error, foundShelter) => {
     res.render('shelters/show.ejs', {
-      shelter:foundShelter
+      shelter:foundShelter,
+      currentUser: req.session.currentUser
     })
   })
 })
