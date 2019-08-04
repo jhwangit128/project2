@@ -80,14 +80,15 @@ app.get('/shelters', (req, res) => {
 })
 
 // Community Page
-app.get('/community', (req, res) => {
+app.get('/posts', (req, res) => {
   if (req.session.currentUser) {
-    res.render('community/index.ejs')
+    res.render('posts/index.ejs',{
+      currentUser: req.session.currentUser
+    })
   } else {
     res.redirect('/sessions/new')
   }
 })
-
 // ABOUT
 
 // CONTROLLERS
@@ -97,6 +98,8 @@ const storesController = require('./controllers/stores.js')
 app.use('/stores', storesController)
 const sheltersController = require('./controllers/shelters.js')
 app.use('/shelters', sheltersController)
+const postsController = require('./controllers/posts.js')
+app.use('/posts', postsController)
 const userController = require('./controllers/users.js')
 app.use('/users', userController)
 const sessionsController = require('./controllers/sessions.js')
