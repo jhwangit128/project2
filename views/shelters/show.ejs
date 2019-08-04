@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container">
+        <a href="/shelters">Back to Adoption Centers Page</a>
+        <h1><%=shelter.name%></h1>
+        <img src=<%=shelter.img%> />
+        <p><%=shelter.location%></p>
+        <p><%=shelter.description%></p>
+        <iframe src=<%=shelter.map%> width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </body>
+</html>

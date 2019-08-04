@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <body>
+        <div class="container">
+          <div class="container">
+          <a href="/stores">Back to Store Page</a>
+          <h1><%=store.name%></h1>
+          <div class="card-container">
+            <div class="store-image-show">
+              <img src=<%=store.img%> />
+            </div>
+            <div class="store-description">
+              <p><%=store.description%></p>
+            </div>
+            <div class="price">
+              PRICE: $<%=store.price%>
+            </div><br />
+            <div class="qty">
+              <% if(store.qty > 0) { %>
+                QTY: <%=store.qty%> remaining <br /><br />
+                <form action="/stores/<%=store.id%>/buy_store?_method=PUT" method="POST">
+                  <input class="buy_btn" type="submit" value="BUY" />
+                </form><br />
+              <% } else { %>
+                SORRY, OUT OF STOCK
+              <% } %>
+            </div>
+            <div class="edit-store">
+              <a href="/stores/<%=store.id%>/edit">Edit this Item</a>
+            </div><br />
+            <form action="/stores/<%=store.id%>?_method=DELETE" method="POST">
+              <input type="submit" value="DELETE">
+            </form>
+          </div>
+          </div>
+        </div>
+      </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container">
+      <a href="/">Back to Home Page</a>
+      <h1>Adoption Centers</h1>
+      <div class="divider"></div>
+        <% for(let i = 0; i < shelters.length; i++) { %>
+          <div class= "section">
+            <a href="/shelters/<%=shelters[i].id%>"><h5><%=shelters[i].name%></h5>
+          </div>
+        <% } %>
+    </div>
+  </body>
+</html>

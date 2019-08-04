@@ -8,6 +8,7 @@ const app = express ()
 const db = mongoose.connection
 const Behavior = require('./models/behaviors.js')
 const Store = require('./models/stores.js')
+const Shelter = require('./models/shelters.js')
 
 // Configuration
 // Allow use of Heroku's port or your own local port, depending on the environment
@@ -70,6 +71,13 @@ app.get('/stores', (req, res) => {
 })
 
 // Adoption Page
+app.get('/shelters', (req, res) => {
+  Shelter.find({}, (error, allShelters) => {
+    res.render('shelters/index.ejs', {
+      shelters: allShelters
+    })
+  })
+})
 
 // Community Page
 app.get('/community', (req, res) => {
@@ -85,6 +93,10 @@ app.get('/community', (req, res) => {
 // CONTROLLERS
 const behaviorsController = require('./controllers/behaviors.js')
 app.use('/behaviors', behaviorsController)
+const storesController = require('./controllers/stores.js')
+app.use('/stores', storesController)
+const sheltersController = require('./controllers/shelters.js')
+app.use('/shelters', sheltersController)
 const userController = require('./controllers/users.js')
 app.use('/users', userController)
 const sessionsController = require('./controllers/sessions.js')
