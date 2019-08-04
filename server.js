@@ -9,6 +9,8 @@ const db = mongoose.connection
 const Behavior = require('./models/behaviors.js')
 const Store = require('./models/stores.js')
 const Shelter = require('./models/shelters.js')
+const Post = require('./models/posts.js')
+const User = require('./models/users.js')
 
 // Configuration
 // Allow use of Heroku's port or your own local port, depending on the environment
@@ -82,8 +84,12 @@ app.get('/shelters', (req, res) => {
 // Community Page
 app.get('/posts', (req, res) => {
   if (req.session.currentUser) {
-    res.render('posts/index.ejs',{
-      currentUser: req.session.currentUser
+    Post.find({}, (error, allPosts) => {
+      res.render('posts/index.ejs',{
+        currentUser: req.session.currentUser,
+        // users: users,
+        posts: allPosts
+      })
     })
   } else {
     res.redirect('/sessions/new')

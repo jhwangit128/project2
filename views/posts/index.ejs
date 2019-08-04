@@ -7,12 +7,21 @@
     <div class="container">
       <a href="/">Back to Home Page</a>
       <h1>Community Page</h1>
-      <div class="divider"></div>
       <h5>Welcome <%=currentUser.username%></h5>
       <a href="/posts/new" class="waves-effect waves-light btn">Add a Post</a>
+      <table>
+          <tr>
+            <th>title</th>
 
-      </form>
-    </div>
+          </tr>
+          <% for (let i = 0; i < posts.length; i++) { %>
+          <tr>
+            <td>
+              <a href="/posts/<%=posts[i].id%>"><%=posts[i].title%></a>
+            </td>
+          </tr>
+        <% } %>
+      </table>
     </div>
   </body>
 </html>
