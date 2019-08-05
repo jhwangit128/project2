@@ -63,7 +63,7 @@ th {
 
 /* BEHAVIOR */
 .behavior-container, .items-container {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -91,17 +91,21 @@ th {
   font-weight: bold;
 }
 
-.behavior-text {
+.behavior-text, .post-text {
   line-height: 2em;
   text-align: justify;
   margin-bottom: 50px;
-  font-weight: bold;
+}
+
+.behavior-img-show {
+  width: 70%;
+  margin-bottom: 20px;
 }
 
 /* STORE */
 .items-container {
   margin: 0 auto;
-  margin-left: 45px;
+  width: 85%;
 }
 
 .item-container {
@@ -128,7 +132,7 @@ th {
 }
 
 /* SHELTER */
-.shelter-img img{
+.shelter-img img {
   width: 50%;
 }
 
@@ -141,4 +145,47 @@ th {
   width: 100%;
   text-align: left;
   margin: 30px 0;
+}
+
+.post-text {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  height: 20px;
+  border: 0px;
+  color: whitesmoke;
+  background: #84DCC6;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: #FF686B;
+}
+
+input[value="BUY"], input[value="SUBMIT"], input[value="ADD"] {
+  height: 30px;
+  width: 80px;
+  border: 0px;
+  color: whitesmoke;
+  background: #585481;
+}
+
+input[type="text"], input[type="number"], input[type="textarea"], input[type="img"] {
+  width: 100%;
+  margin: 8px 0;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.description {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  padding-top: 5px;
 }

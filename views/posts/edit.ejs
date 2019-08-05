@@ -4,13 +4,13 @@
     <% include ../partials/head.ejs %>
   </head>
   <body>
-    <% include ../partials/header2.ejs %>
+    <!-- <% include ../partials/header2.ejs %> -->
     <div class="container">
-      <h1>Edit Page</h1>
+      <h3>Edit</h3>
       <div class="container">
         <form action="/posts/<%=post.id%>?_method=PUT" method="POST">
-          Name: <input type="text" name="name" value="<%=post.title%>"/><br />
-          Description: <input type="textarea" name="description" value="<%=post.message%>"/><br />
+          Title: <input type="text" name="title" value="<%=post.title%>"/><br />
+          Description: <textarea class="description"><%=post.message%></textarea><br />
           Image: <input type="img" name="image" value="<%=post.img%>"/><br />
           <input type="submit" value="SUBMIT">
         </form>
