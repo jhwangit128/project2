@@ -18,6 +18,7 @@ th {
 .navbar {
   text-align: center;
   margin: 0 auto;
+
 }
 
 .container {
@@ -39,6 +40,9 @@ th {
   justify-content: flex-end;
 }
 
+
+
+/* INDEX BACKGROUND IMG */
 .main {
   width: 100%;
   height: 830px;
@@ -47,9 +51,9 @@ th {
   background-size: cover;
 }
 
-.logo {
+/* .logo {
   text-align: center;
-}
+} */
 .meow {
   width: 20%;
   margin-top: 20px;
@@ -188,4 +192,66 @@ input[type="text"], input[type="number"], input[type="textarea"], input[type="im
   width: 100%;
   height: 100px;
   padding-top: 5px;
+}
+
+/* DROPDOWN NAVBAR */
+.main-nav-wrap {
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-nav-wrap ul {
+	list-style:none;
+	position:relative;
+	padding:0;
+}
+
+.main-nav-wrap ul a {
+	display: block;
+	color: #F7979D;
+	text-decoration: none;
+	font-size: 14px;
+	padding: 0 25px;
+}
+
+.main-nav-wrap ul li {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.main-nav-wrap ul li:hover {
+	background:#f6f6f6;
+}
+
+.main-nav-wrap ul ul {
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background:#fff;
+	padding:0;
+}
+
+.main-nav-wrap ul ul li {
+	float:none;
+}
+
+.main-nav-wrap ul li:hover > ul {
+	display:block;
+}
+
+nav {
+  box-shadow: none!important;
+}
+
+.content-wrap {
+  width: 54%;
+  margin: 0 auto;
+}
+
+img {
+  border-radius: 3px;
 }
