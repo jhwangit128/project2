@@ -6,20 +6,18 @@
   <body>
     <% include ../partials/header.ejs %>
     <div class="container">
-      <a href="/">Back to Home Page</a>
-      <h3>How to Solve Behavior Problems in Cats</h3>
-      <div class="row">
-        <div class= " col s12">
-          <div class="card">
-            <% for(let i = 0; i < behaviors.length; i++) { %>
-              <div class="card-image">
+      <!-- <a href="/">Back to Home Page</a> -->
+      <h4>How to Solve Behavior Problems in Cats</h4><br /><br />
+      <div class="behavior-container">
+        <% for(let i = 0; i < behaviors.length; i++) { %>
+            <div class="card-container">
+              <div class="behavior-img">
                 <a href="/behaviors/<%=behaviors[i].id%>"><img src=<%=behaviors[i].img%> /></a>
-              <span class="card-title"><%=behaviors[i].title%></span>
               </div>
-            <% } %>
-          </div>
+              <div class="behavior-card-text"><%=behaviors[i].title%></div>
+            </div>
+        <% } %>
         </div>
-      </div>
     </div>
   </body>
 </html>

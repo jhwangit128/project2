@@ -6,19 +6,24 @@
   <body>
     <% include ../partials/header.ejs %>
     <div class="container">
-      <a href="/">Back to Home Page</a>
-      <h1>Community Page</h1>
-      <h5>Welcome <%=currentUser.username%></h5>
+      <!-- <a href="/">Back to Home Page</a> -->
+      <!-- <h4>Community Page</h4> -->
+      <!-- <h5>Welcome <%=currentUser.username%></h5> -->
+      <div class="post-btn">
       <a href="/posts/new" class="waves-effect waves-light btn">Add a Post</a>
-      <table>
+      </div>
+      <table class="responsive-table highlight">
           <tr>
             <th>title</th>
-
+            <th>username</th>
           </tr>
           <% for (let i = 0; i < posts.length; i++) { %>
           <tr>
             <td>
               <a href="/posts/<%=posts[i].id%>"><%=posts[i].title%></a>
+            </td>
+            <td>
+              <%=posts[i].username%></a>
             </td>
           </tr>
         <% } %>
