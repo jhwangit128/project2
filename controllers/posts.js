@@ -90,6 +90,15 @@ router.get('/new', (req, res) => {
   }
 })
 
+// COMMENT BUTTON
+router.put('/:id/comment', (req, res) => {
+  Post.findByIdAndUpdate(req.params.id, {$push: { comment:req.comment}}, {new:true},
+  (error, updatedPost) => {
+    updatedPost.save()
+    res.redirect('/posts/' + req.params.id)
+  })
+})
+
 // DELETE ROUTE
 router.delete('/:id', (req, res) => {
   Post.findByIdAndRemove(req.params.id, (error, deltedPost) => {
@@ -128,13 +137,6 @@ router.get('/:id', (req, res) => {
   })
 })
 
-// COMMENT BUTTON
-router.put('/:id/comment', (req, res) => {
-  Post.findByIdAndUpdate(req.params.id, req.comment, {new:true},
-  (error, updatedPost) => {
-    res.redirect('/posts/' + req.params.id)
-  })
-})
 // CREATE ROUTE
 router.post('/', (req, res) => {
   Post.create(req.body, (error, createdPosts) => {

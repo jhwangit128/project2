@@ -15,8 +15,13 @@ th {
   text-transform: uppercase;
 }
 
-.brand-logo {
+.meow-logo {
   width: 58%;
+}
+
+.meow {
+  width: 20%;
+  margin-top: 20px;
 }
 
 .navbar {
@@ -44,8 +49,6 @@ th {
   justify-content: flex-end;
 }
 
-
-
 /* INDEX BACKGROUND IMG */
 .main {
   width: 100%;
@@ -54,14 +57,6 @@ th {
   background-repeat: no-repeat;
   background-size:  cover;
   bottom: 0px;
-}
-
-/* .logo {
-  text-align: center;
-} */
-.meow {
-  width: 20%;
-  margin-top: 20px;
 }
 
 .outer-container {
@@ -164,8 +159,40 @@ th {
   margin-top: 20px;
 }
 
+.post-comment {
+  text-align: left;
+  width: 70%;
+}
+
+.edit-delete {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.edit-delete-store {
+  margin-top: 50px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.edit {
+  font-size: 14px;
+  margin-right: 15px;
+  color: white;
+  background-color: #16324F;
+  padding: 4px 6px;
+}
+
+.edit:hover {
+  color: #16324F;
+  background-color: #FF686B;
+}
 input[type="submit"] {
-  height: 20px;
+  height: 30px;
   border: 0px;
   color: whitesmoke;
   background: #84DCC6;
@@ -174,6 +201,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   cursor: pointer;
   background: #FF686B;
+  color: #16324F;
 }
 
 input[value="BUY"], input[value="SUBMIT"], input[value="ADD"] {
@@ -262,8 +290,21 @@ nav {
 img {
   border-radius: 3px;
 }
+.wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.copy {
+  margin-right: 10px;
+}
+
+.material-icons {
+  font-size: 1em;
+}
 
 footer {
   font-size: 12px;
-  /* margin-top: 20px; */
+  padding: 0 12px;
 }

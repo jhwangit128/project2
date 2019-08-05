@@ -10,23 +10,25 @@
         <h4><%=post.title%></h4>
         <img src=<%=post.img%> />
         <p class="post-text"><%=post.message%></p><br />
-        <p class="post-comment"><%=post.comment%></p><br />
-      <div class="comment">
-        <form class="col s12" action="/posts/<%=post.id%>/comment?_method=PUT" method="POST">
-          <div class="input-field">
-            <input id="comment" type="text" name="comment">
-            <label for="comment">write a comment</label>
+        <div class="edit-delete">
+          <a class="edit" href="/posts/<%=post.id%>/edit">EDIT</a>
+          <form action="/posts/<%=post.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE">
+          </form><br />
+        </div><br /><br />
+        <div class="container">
+          <p class="post-comment"><%=post.comment%></p><br />
+          <div class="comment">
+            <form class="col s12" action="/posts/<%=post.id%>?_method=PUT" method="POST">
+              <div class="input-field">
+                <input id="comment" type="text" name="comment">
+                <label for="comment">write a comment</label>
+              </div>
+              <button class="btn waves-effect waves-light pink accent-3" type="submit" name="action">Submit
+              </button>
+            </form>
           </div>
-          <button class="btn waves-effect waves-light pink accent-3" type="submit" name="action">Submit
-          </button>
-        </form>
-      </div>
-      <div class="edit-delete">
-        <a href="/posts/<%=post.id%>/edit">Edit</a>
-        <form action="/posts/<%=post.id%>?_method=DELETE" method="POST">
-          <input type="submit" value="DELETE">
-        </form><br />
-      </div>
+        </div>
     </div>
     <% include ../partials/footer.ejs %>
   </body>
