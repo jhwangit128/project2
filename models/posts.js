@@ -4,7 +4,8 @@ const postSchema = new mongoose.Schema({
   username: { type: String },
   title: { type: String },
   message: { type: String },
-  img: { type: String }
+  img: { type: String },
+  comment: { type: String }
 }, {timestamps: true}
 )
 

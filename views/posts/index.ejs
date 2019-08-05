@@ -8,7 +8,7 @@
     <div class="container">
       <!-- <a href="/">Back to Home Page</a> -->
       <!-- <h4>Community Page</h4> -->
-      <!-- <h5>Welcome <%=currentUser.username%></h5> -->
+      <h5>Welcome <%=currentUser.username%></h5>
       <div class="post-btn">
       <a href="/posts/new" class="waves-effect waves-light btn">Add a Post</a>
       </div>
@@ -23,7 +23,7 @@
               <a href="/posts/<%=posts[i].id%>"><%=posts[i].title%></a>
             </td>
             <td>
-              <%=posts[i].username%></a>
+              <%=posts[i].username%>
             </td>
             <td>
               <form action="/posts/<%=posts[i].id%>?_method=DELETE" method="POST">
@@ -35,5 +35,6 @@
         <% } %>
       </table>
     </div>
+    <% include ../partials/footer.ejs %>
   </body>
 </html>

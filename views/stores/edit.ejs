@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <!-- <% include ../partials/header2.ejs %> -->
+    <div class="container">
+      <h3>Edit</h3>
+      <div class="container">
+        <form action="/stores/<%=store.id%>?_method=PUT" method="POST">
+          Title: <input type="text" name="title" value="<%=store.name%>"/><br />
+          Description: <textarea class="description"><%=store.message%></textarea><br />
+          Image: <input type="img" name="image" value="<%=store.img%>"/><br />
+          <input type="submit" value="SUBMIT">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

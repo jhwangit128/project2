@@ -1,6 +1,7 @@
 // CONTROLLERS
 const express = require('express')
 const router = express.Router()
+const User = require('../models/users.js')
 const Store = require('../models/stores.js')
 
 // SEED
@@ -117,6 +118,18 @@ router.get('/:id', (req, res) => {
       currentUser: req.session.currentUser
     })
   })
+})
+
+// EDIT
+router.get('/:id/edit', (req, res) => {
+  Store.findById(req.params.id, (error, foundStore) => {
+    res.render(
+      'stores/edit.ejs',
+      {
+        store:foundStore,
+        currentUser: req.session.currentUser
+      })
+    })
 })
 
 // BUY BUTTON

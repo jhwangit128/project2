@@ -29,14 +29,18 @@
                 SORRY, OUT OF STOCK
               <% } %>
             </div>
-            <!-- <div class="edit-store">
-              <a href="/stores/<%=store.id%>/edit">Edit this Item</a>
-            </div><br />
+            <div class="edit-store">
+              <% if( currentUser === "banana") { %>
+                <a style:"display:block" href="/stores/<%=store.id%>/edit">Edit</a>
+              <% } else { %>
+                  <a style:"display:block" href="/stores/<%=store.id%>/edit">Edit</a>
+                <% } %>
             <form action="/stores/<%=store.id%>?_method=DELETE" method="POST">
               <input type="submit" value="DELETE">
-            </form> -->
+            </form>
           </div>
         </div>
       </div>
+    <% include ../partials/footer.ejs %>
   </body>
 </html>

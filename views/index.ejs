@@ -4,64 +4,9 @@
     <% include ./partials/head.ejs %>
   </head>
   <body>
-    <div class="navbar">
-        <div class="nav-wrap">
-          <div class="nav-top">
-            <div class= "brand-logo center">
-              <a href="/"><img class= "meow" src="./img/meow_logo.png"></a>
-            </div>
-            <div class="signup-login">
-              <ul>
-                <li>
-                  <% if(currentUser) {%>
-                    Welcome <%= currentUser.username %>
-                </li>
-                <li>
-                  <form action="/sessions?_method=DELETE" method="POST">
-                    <input type="submit" value="Logout" class="waves-effect waves-light btn blue-grey">
-                  </form>
-                </li>
-                <li>
-                  <% } else { %>
-                    <a href="/users/new" class="waves-effect waves-light btn blue-grey">Sign Up</a>
-                    <a href="/sessions/new" class="waves-effect waves-light btn blue-grey">Log In</a>
-                    <% } %>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <nav class="main-nav-wrap">
-          <div class="content-wrap">
-            <ul>
-              <li><a href="/behaviors">CAT BEHAVIOR & TRAINING</a>
-                <ul>
-                  <li><a href="/behaviors/5d45f3bc5d26b81e5e4f96c3">Litter Box Issues</a></li>
-                  <li><a href="/behaviors/5d45f3bc5d26b81e5e4f96c4">Unwated Scratching</a></li>
-                  <li><a href="/behaviors/5d45f3bc5d26b81e5e4f96c5">Aggressive Behavior</a></li>
-                  <li><a href="/behaviors/5d45f3bc5d26b81e5e4f96c7">Obsessive Compulsive Licking</a></li>
-                  <li><a href="/behaviors/5d45f3bc5d26b81e5e4f96c6">Chewing</a></li>
-                  <li><a href="/behaviors/5d45f3bc5d26b81e5e4f96c8">Nighttime Activity</a></li>
-                  <li><a href="/behaviors/5d45f3bc5d26b81e5e4f96ca">Chronic Stress</a></li>
-                  <li><a href="/behaviors/5d45f3bc5d26b81e5e4f96c9">Scaredy Cat</a></li>
-                </ul>
-              </li>
-              <li><a href="/stores">STORE</a></li>
-              <li><a href="/shelters">ADOPTION CENTER</a>
-                <ul>
-                  <li><a href="/shelters/5d474dcbae63f73e0f8017a6">PAWS Chicago</a></li>
-                  <li><a href="/shelters/5d474dcbae63f73e0f8017a7">Harmony House For Cats</a></li>
-                  <li><a href="/shelters/5d474dcbae63f73e0f8017a8">The Anti-Cruelty Society</a></li>
-                  <li><a href="/shelters/5d474dcbae63f73e0f8017a9">The Catcade</a></li>
-                </ul>
-              </li>
-              <li><a href="/posts">COMMUNITY</a></li>
-            </ul>
-          </div>
-        </nav>
-    </div>
+    <% include ./partials/header.ejs %>
     <div class="main">
-
     </div>
+    <% include ./partials/footer.ejs %>
   </body>
 </html>

@@ -90,7 +90,6 @@ app.get('/posts', (req, res) => {
     Post.find({}, (error, allPosts) => {
       res.render('posts/index.ejs',{
         currentUser: req.session.currentUser,
-        // users: users,
         posts: allPosts
       })
     })
