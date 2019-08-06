@@ -1,4 +1,4 @@
-### MEOW
+## MEOW
 
 + This app allows users to search for cat's behavior problems and how to solve them.
 
@@ -31,3 +31,9 @@ https://spaceship2.herokuapp.com/
 + Add a shipping cart that allow users to purchase the products.
 + Adding an administrator who has the authority to edit and delete     certain parts.
 + Auto login after signing up.
+
+### SOURCES USED
+
++ https://www.aspca.org/pet-care/cat-care/common-cat-behavior-issues
++ https://www.catbehaviorassociates.com/the-must-have-checklist-for-solving-your-cats-behavior-problem
++ https://www.chewy.com/
