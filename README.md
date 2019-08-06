@@ -26,7 +26,7 @@ Who would use it: People who have cats with behavior issues.
 
 https://spaceship2.herokuapp.com/
 
-# UNSOLVED PROBLEMS
+### UNSOLVED PROBLEMS
 
 + Add a shipping cart that allow users to purchase the products.
 + Adding an administrator who has the authority to edit and delete     certain parts.
