@@ -10,7 +10,7 @@
       <div class="container">
         <form action="/stores/<%=store.id%>?_method=PUT" method="POST">
           Title: <input type="text" name="title" value="<%=store.name%>"/><br />
-          Description: <textarea class="description"><%=store.message%></textarea><br />
+          Description: <textarea class="description"><%=store.description%></textarea><br />
           Image: <input type="img" name="image" value="<%=store.img%>"/><br />
           <input type="submit" value="SUBMIT">
         </form>
