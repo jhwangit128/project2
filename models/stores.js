@@ -6,7 +6,8 @@ const storeSchema = new mongoose.Schema({
   description: { type: String },
   img: { type: String },
   price: { type: Number, min: 0 },
-  qty: { type: Number, min: 0 }
+  qty: { type: Number, min: 0 },
+  cart: { type: Number, min: 0}
 }, {timestamps: true}
 )
 
