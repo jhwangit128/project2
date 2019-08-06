@@ -132,7 +132,7 @@ router.get('/:id', (req, res) => {
   Post.findById(req.params.id, (error, foundPost) => {
     res.render('posts/show.ejs', {
       currentUser: req.session.currentUser,
-      post:foundPost
+      post:foundPost,
     })
   })
 })

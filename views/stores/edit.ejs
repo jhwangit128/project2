@@ -11,7 +11,10 @@
         <form action="/stores/<%=store.id%>?_method=PUT" method="POST">
           Title: <input type="text" name="title" value="<%=store.name%>"/><br />
           Description: <textarea class="description"><%=store.description%></textarea><br />
+          Category: <input type="text" name="title" value="<%=store.use%>"/><br />
           Image: <input type="img" name="image" value="<%=store.img%>"/><br />
+          Price: <input type="number" name="price" value="<%=store.price%>"/><br />
+          QTY: <input type="number" name="qty" value="<%=store.qty%>"/><br />
           <input type="submit" value="SUBMIT">
         </form>
       </div>

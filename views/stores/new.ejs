@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head.ejs %>
+  </head>
+  <body>
+    <div class="container">
+      <h3>New Item</h3>
+      <div class="row">
+        <form class="col s12" action="/stores" method="POST">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="placeholder" type="text" name="name" />
+              <label for="name">Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="description" type="text" name="description" />
+              <label for="description">Write your description here</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="img" type="text" name="img" placeholder="https://img.chewy.com/is/image/catalog/140151_MAIN._AC_SL1500_V1557935225_.jpg" />
+              <label for="img">add your image</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="price" type="number" name="price" placeholder="$" />
+              <label for="price">Price</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="qty" type="number" name="qty" />
+              <label for="qty">QTY</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="use" type="text" name="use" />
+              <label for="use">Category</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light pink accent-3" type="submit" name="action">Submit
+          </button>
+        </form>
+    </div>
+  </body>
+</html>

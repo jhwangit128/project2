@@ -220,6 +220,10 @@ th {
 
 
 /* STORE */
+.store-btn {
+  float: left;
+}
+
 .items-container {
   margin: 0 auto;
   width: 85%;
@@ -227,6 +231,7 @@ th {
 
 .item-container {
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .item-img{
@@ -236,6 +241,7 @@ th {
 }
 
 .store-use {
+  font-family: 'Poppins', sans-serif;
   font-size: 1.5em;
   color: #585481;
 }
@@ -254,6 +260,7 @@ th {
 }
 
 .item-price {
+  font-family: 'Poppins', sans-serif;
   font-size: 1em;
   color: #343F4E;
 }

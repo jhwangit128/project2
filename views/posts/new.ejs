@@ -10,26 +10,26 @@
         <form class="col s12" action="/posts" method="POST">
           <div class="row">
             <div class="input-field col s12">
-              <input placeholder="placeholder" type="text" name="title">
+              <input placeholder="placeholder" type="text" name="title" />
               <label for="title">Title</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="message" type="text" name="message">
+              <input id="message" type="text" name="message" />
               <label for="message">write your message here</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="image" type="text" name="image" placeholder="https://i.pinimg.com/564x/cd/28/64/cd2864770e57a5f275c4c4d619c73799.jpg">
-              <label for="image">add your image</label>
+              <input id="img" type="text" name="img" placeholder="https://i.pinimg.com/564x/cd/28/64/cd2864770e57a5f275c4c4d619c73799.jpg" />
+              <label for="img">add your image</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="username" type="text" name="username">
-              <label for="username"><%=currentUser.username%></label>
+              <input id="username" type="text" name="username" value="<%=currentUser.username%>" />
+              <label for="username">username</label>
             </div>
           </div>
           <button class="btn waves-effect waves-light pink accent-3" type="submit" name="action">Submit

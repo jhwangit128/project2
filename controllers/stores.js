@@ -122,27 +122,44 @@ router.get('/seed', (req, res) => {
   })
 })
 
-// SHOW ROUTE
-router.get('/:id', (req, res) => {
-  Store.findById(req.params.id, (error, foundStore) => {
-    res.render('stores/show.ejs', {
-      store:foundStore,
+// NEW ROUTE
+router.get('/new', (req, res) => {
+  if (req.session.currentUser) {
+    res.render('stores/new.ejs', {
       currentUser: req.session.currentUser
     })
+  } else {
+    res.render('sessions/new.ejs')
+  }
+})
+
+
+// DELETE ROUTE
+router.delete('/:id', (req, res) => {
+  Store.findByIdAndRemove(req.params.id, (error, deltedPost) => {
+    res.redirect('/stores')
   })
 })
 
 // EDIT
-// router.get('/:id/edit', (req, res) => {
-//   Store.findById(req.params.id, (error, foundStore) => {
-//     res.render(
-//       'stores/edit.ejs',
-//       {
-//         store:foundStore,
-//         currentUser: req.session.currentUser
-//       })
-//     })
-// })
+router.get('/:id/edit', (req, res) => {
+  Store.findById(req.params.id, (error, foundStore) => {
+    res.render(
+      'stores/edit.ejs',
+      {
+        store:foundStore,
+        currentUser: req.session.currentUser
+      })
+    })
+})
+
+// UPDATE
+router.put('/:id', (req, res) => {
+  Store.findByIdAndUpdate(req.params.id, req.body, {new:true},
+  (error, updatedPost) => {
+    res.redirect('/stores/' + req.params.id)
+  })
+})
 
 // BUY BUTTON
 router.put('/:id/buy_store', (req, res) => {
@@ -154,14 +171,30 @@ router.put('/:id/buy_store', (req, res) => {
   })
 })
 
-router.put('/:id/buy_store', (req, res) => {
-  Store.findByIdAndUpdate(req.params.id, req.cart, {new:true},
-    (error, updatedCart) => {
-    updatedCart.cart +=1
-    updatedCart.save()
-    res.redirect('/stores/' + req.params.id)
+// router.put('/:id/buy_store', (req, res) => {
+//   Store.findByIdAndUpdate(req.params.id, req.cart, {new:true},
+//     (error, updatedCart) => {
+//     updatedCart.cart +=1
+//     updatedCart.save()
+//     res.redirect('/stores/' + req.params.id)
+//   })
+// })
+
+// SHOW ROUTE
+router.get('/:id', (req, res) => {
+  Store.findById(req.params.id, (error, foundStore) => {
+    res.render('stores/show.ejs', {
+      store:foundStore,
+      currentUser: req.session.currentUser
+    })
   })
 })
-// SHOPPING CART
+
+// CREATE ROUTE
+router.post('/', (req, res) => {
+  Store.create(req.body, (error, createdStores) => {
+    res.redirect('/stores')
+  })
+})
 
 module.exports = router
