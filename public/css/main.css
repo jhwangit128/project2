@@ -25,12 +25,14 @@ th {
 
 /* LOGO */
 .meow-logo {
-  width: 80%;
+  width: 100%;
   text-align: center;
+  margin: 0 auto;
+  margin-left: 75px;
 }
 
 .meow {
-  width: 35%;
+  width: 25%;
   margin-top: 20px;
   display: inline-block;
 }
