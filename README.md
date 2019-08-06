@@ -29,8 +29,9 @@ https://spaceship2.herokuapp.com/
 ### UNSOLVED PROBLEMS
 
 + Add a shipping cart that allow users to purchase the products.
-+ Adding an administrator who has the authority to edit and delete     certain parts.
++ Adding an administrator who has the authority to edit and delete certain parts.
 + Auto login after signing up.
++ Fixing "Commenting" platform
 
 ### SOURCES USED
 

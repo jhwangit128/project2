@@ -1,6 +1,7 @@
 /* GENERAL */
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Rubik', sans-serif;
+;
 }
 
 ul {
@@ -9,7 +10,8 @@ ul {
 }
 
 h3, h4 {
-  font-family: 'Bree Serif', serif;'
+  font-family: 'Asap', sans-serif;
+  text-transform: uppercase;
 }
 
 th {
@@ -85,6 +87,7 @@ th {
 	list-style:none;
   margin: 0 auto;
 	padding: 0;
+
 }
 
 .main-nav-wrap ul a {
@@ -103,6 +106,7 @@ th {
 
 .main-nav-wrap ul li:hover > ul {
 	display:block;
+  z-index: 1000;
 }
 
 .main-nav-wrap ul li:hover {

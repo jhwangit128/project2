@@ -92,7 +92,7 @@ router.get('/new', (req, res) => {
 
 // COMMENT BUTTON
 router.put('/:id/comment', (req, res) => {
-  Post.findByIdAndUpdate(req.params.id, {$push: { comment:req.params.comment}}, {new:true},
+  Post.update(req.params.id, { $push: { comments: {$each: [req.params.comment]}}}, {new:true},
   (error, updatedPost) => {
     updatedPost.save()
     res.redirect('/posts/' + req.params.id)
