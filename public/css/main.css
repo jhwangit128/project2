@@ -111,6 +111,7 @@ th {
 
 .main-nav-wrap ul li a:hover {
 	background: #f50057;
+  color: white;
 }
 
 .main-nav-wrap ul ul {
