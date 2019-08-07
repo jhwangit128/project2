@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const behaviorSchema = new mongoose.Schema({
   title: { type: String },
   description: { type: String },
+  treatment: { type: String },
   img: { type: String }
 }, {timestamps: true}
 )

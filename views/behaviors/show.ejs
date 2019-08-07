@@ -6,12 +6,9 @@
   <body>
     <% include ../partials/header2.ejs %>
     <div class="container outer-container">
-
-        <!-- <a href="/behaviors">Back to Behaviors Page</a> -->
-        <br /><h5><%=behavior.title%></h5><br />
-        <img class="behavior-img-show" src=<%=behavior.img%> />
-        <p class="behavior-text container"><%=behavior.description%></p>
-
+      <br /><h5><%=behavior.title%></h5><br />
+      <img class="behavior-img-show" src=<%=behavior.img%> />
+      <p class="behavior-text container"><%=behavior.description%><br /><br />TREATMENT<br /><%=behavior.treatment%></p>
     </div>
     <% include ../partials/footer.ejs %>
   </body>
