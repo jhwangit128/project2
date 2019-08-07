@@ -5,13 +5,13 @@
   </head>
   <body>
     <% include ../partials/header.ejs %>
-    <div class="container">
+    <div class="container"><br />
       <!-- <a href="/">Back to Home Page</a> -->
-      <h3>Adoption Centers</h3>
+      <h5>Adoption Centers</h5><br />
       <div class="divider"></div>
         <% for(let i = 0; i < shelters.length; i++) { %>
           <div class= "section">
-            <a href="/shelters/<%=shelters[i].id%>"><h5><%=shelters[i].name%></h5>
+            <a href="/shelters/<%=shelters[i].id%>"><h6><%=shelters[i].name%></h6>
           </div>
         <% } %>
     </div>

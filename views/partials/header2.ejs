@@ -1,9 +1,15 @@
 <div class="navbar">
     <div class="nav-wrap">
-      <div class="nav-top container">
-        <div class= "meow-logo">
-          <a href="/"><img class="meow" src="../img/meow_logo.png"></a>
+      <div class="nav-top">
+        <% if(currentUser) {%>
+        <div class= "meow-logo" style="margin-right:110px;">
+          <a href="/"><img src="../img/meow_logo.png"></a>
         </div>
+        <% } else { %>
+          <div class= "meow-logo" style="margin-right:60px;" >
+            <a href="/"><img src="../img/meow_logo.png"></a>
+          </div>
+        <% } %>
         <div class="signup-login">
           <ul>
             <li>

@@ -7,8 +7,8 @@
     <% include ../partials/header2.ejs %>
     <div class="container outer-container">
         <!-- <a href="/posts">Back to Community Page</a> -->
-        <h4><%=post.title%></h4>
-        <img src=<%=post.img%> />
+        <h5><%=post.title%></h5>
+        <img class="community-img" src=<%=post.img%> />
         <p class="post-text"><%=post.message%></p><br />
         <div class="edit-delete">
           <% if(currentUser) { %>

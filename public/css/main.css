@@ -9,9 +9,8 @@ ul {
   padding-left: 0;
 }
 
-h3, h4 {
+h5 {
   font-family: 'Asap', sans-serif;
-  text-transform: uppercase;
 }
 
 th {
@@ -30,14 +29,11 @@ th {
   width: 620px;
   display: inline-block;
   text-align: center;
-  margin: 0;
-  margin-left: 25px;
 }
 
 .meow-logo img {
   width: 28%;
   margin-top: 20px;
-  margin-right: 100px;
   display: inline-block;
   transition: transform 0.5s ease, border 0.5s ease;
 }
@@ -62,7 +58,7 @@ th {
 }
 
 .nav-top {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -102,14 +98,18 @@ th {
 	position: relative;
 	margin: 0;
 	padding: 0;
+  z-index: 1000;
 }
 
 .main-nav-wrap ul li:hover > ul {
 	display:block;
-  z-index: 1000;
 }
 
 .main-nav-wrap ul li:hover {
+	background: #f50057;
+}
+
+.main-nav-wrap ul li a:hover {
 	background: #f50057;
 }
 
@@ -148,6 +148,11 @@ th {
 
 
 /* LOGIN SIGNUP */
+
+.signup-login {
+  margin-top: 10px;
+}
+
 .user_login {
   width: 100%;
   height: 830px;
@@ -287,10 +292,13 @@ th {
 }
 
 .section a:hover {
-  color: #263238;
+  color: #455a64;
+  text-decoration:underline #f50057;
 }
 
-
+.shelter-font {
+  font-size: 24px;
+}
 /* COMMUNITY */
 .post-btn {
   width: 100%;
@@ -342,7 +350,17 @@ th {
   background-color: #FF686B;
 }
 
+.community-img {
+  width: 50%;
+}
 
+.community-title {
+  color: black;
+}
+
+.community-title:hover {
+  color: gray;
+}
 /* BUTTONS STYLING */
 input[type="submit"] {
   height: 30px;
