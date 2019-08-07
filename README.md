@@ -33,7 +33,7 @@ https://spaceship2.herokuapp.com/
 + Auto login after signing up.
 + Fixing "Commenting" platform
 
-### SOURCES USED
+### RESOURCES
 
 + https://www.aspca.org/pet-care/cat-care/common-cat-behavior-issues
 + https://www.catbehaviorassociates.com/the-must-have-checklist-for-solving-your-cats-behavior-problem
