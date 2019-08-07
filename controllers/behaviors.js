@@ -8,7 +8,7 @@ router.get('/seed', (req, res) => {
   Behavior.remove({}, () => {
     Behavior.create([
       {
-        title: 'Litter box issues',
+        title: 'Litter Box Issues',
         description: "If you spot your cat straining or unable to urinate, it needs immediate veterinary care. Special litter, diets, pheromones, supplements, and medications can all help with urinary behavioral problems in your cat. When medical reasons have been ruled out, then it's oftentimes a behavioral problem that needs to be addressed.",
         treatment: "Ensure that the litter box is never dirty because cats are fastidious about their toilets." +
         "Having too few litter boxes may also be an issue. The general rule is to have one more box than you have cats: For example, a household with one cat should have two boxes, a two-cat house should have three, and so on. Your cat may not like the type of litter you're using or it may be too deep in the box. Try using less, switching to unscented litter or a different brand, or using an alternative to standard clay litters.",
