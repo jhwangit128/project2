@@ -2,7 +2,7 @@
 
 + This app allows users to search for cat's behavior problems and how to solve them.
 
-+ It also has a online store with products for cats who have behavior problems.
++ It also has a online store with products for cats who have behavior issues.
 
 + Users can interact with each other by joining app's community page where they can write messages and upload their pictures.
 
@@ -18,7 +18,7 @@ CSS
 
 ### PROBLEM
 
-Problem and Idea: My friend has a dog with a behavior issue but since I love cats, I made an app about cat's common behaviors and tips for changing them.
+Problem and Idea: I wanted to make an app for my close friend who has a companion with  a behavior issue and that led me to build an app that has the information about cat's common behavior issues and tips for changing them.
 
 Who would use it: People who have cats with behavior issues.
 
