@@ -1,8 +1,8 @@
 ## MEOW
 
-+ This app allows users to search for cat's behavior problems and how to solve them.
++ This app allows users to learn information about common cat behavior problems and how to solve them.
 
-+ It also has a online store with products for cats who have behavior issues.
++ It also has an online store with products that can help cats to live a happy life.
 
 + Users can interact with each other by joining app's community page where they can write messages and upload their pictures.
 
@@ -18,7 +18,7 @@ CSS
 
 ### PROBLEM
 
-Problem and Idea: I wanted to make an app for my close friend who has a companion with  a behavior issue and that led me to build an app that has the information about cat's common behavior issues and tips for changing them.
+Problem and Idea: I wanted to make an app for a close friend who has an animal companion with a behavior problem and that led me to dig deeper and eventually build this app.
 
 Who would use it: People who have cats with behavior issues.
 
