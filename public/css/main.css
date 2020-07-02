@@ -1,7 +1,6 @@
 /* GENERAL */
 body {
   font-family: 'Rubik', sans-serif;
-;
 }
 
 ul {
@@ -29,9 +28,11 @@ th {
   width: 100%;
   height: 100px;
   margin: 0 auto;
+  margin-top: 8px;
   background-image: url(../img/meow_logo_s.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 18%;
 }
 
 /* .meow-logo img {
@@ -70,34 +71,40 @@ th {
 /* DROPDOWN NAVBAR */
 .main-nav-wrap {
   width: 100%;
-  background-color: white;
+  height: 50px;
   margin: 0 auto;
-  text-align: center;
+  margin-top: 20px;
+  background-color: #333333;
+  /* border: 1px solid yellow; */
 }
 
 .content-wrap {
-  width: 45%;
+  width: 70%;
+  height: 50px;
   margin: 0 auto;
+  /* border: 1px solid blue; */
 }
 
 .main-nav-wrap ul {
-  width: 100%;
 	list-style:none;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  /* border: 1px solid red; */
 }
 
 .main-nav-wrap ul a {
-	color: #F7979D;
 	text-decoration: none;
-	font-size: 14px;
-	padding: 0 35px;
-  margin: 0 auto;
+	font-size: 13px;
+  /* border: 1px solid green; */
+  height: 50px;
+  line-height: 50px;
 }
 
 .main-nav-wrap ul li {
+  /* color: white; */
 	position: relative;
-	margin: 0;
-	padding: 0;
   z-index: 1000;
 }
 
@@ -111,22 +118,28 @@ th {
 
 .main-nav-wrap ul li a:hover {
 	background: #f50057;
-  color: white;
 }
 
 .main-nav-wrap ul ul {
-	display:none;
-	position:absolute;
-	top:100%;
-	left:0;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
 	background: whitesmoke;
-	padding:0;
 }
 
 .main-nav-wrap ul ul li {
-	float:none;
-  line-height: 20px;
-  padding: 20px 0;
+  height: 50px;
+  width: 195px;
+	float: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu a {
+  color: #333333!important;
+  margin: 0;
+  padding: 0;
 }
 
 
