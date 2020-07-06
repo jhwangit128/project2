@@ -21,7 +21,7 @@ router.get('/seed', (req, res) => {
         title: 'Aggressive Behavior',
         description: "A cat may become aggressive for all kinds of reasons, including illness, overcrowding, lack of socialization, maternal protection, even simple play.",
         treatment: "Discuss your cat’s aggression with your vet. Pain and sickness can put anyone in a bad mood, so you'll want to rule out any physical causes for kitty's bad temper before you do anything else. If your furry household is often in a snit, it could be because there aren’t enough resources to go around. Keep the peace by making sure there are enough litter boxes, food and water bowls, toys, beds and perches, then spread them through the house to reduce congestion.",
-        img:'https://icatcare.org/sites/default/files/kcfinder/images/images/aggressive-cat_0.jpg'
+        img:'https://www.thehonestkitchen.com/blog/wp-content/uploads/2015/09/iStock_000000083364_Medium.jpg'
       }, {
         title: 'Chewing',
         description: "Cats are not known to be the voracious chewers that dogs can be. Yet some still manage to do quite a bit of damage with their teeth. Chewing behavior in your cat may be caused by boredom, aggression, a nutritional deficiency, teething in kittens, or having been weaned too young. It might also simply be because your cat is playing or likes the texture or taste of the item.",
@@ -36,7 +36,7 @@ router.get('/seed', (req, res) => {
         title: 'Too much nighttime activity',
         description: "Until their domestication cats were nocturnal by nature, so it's easy to see why too much nighttime action is a common complaint of many new pet parents. To help the kitty who doesn't understand that nighttime is for sleeping -- not for playing with your nose.",
         treatment: "First, make sure your cat has no medical problems. An agitated, active feline could be one that's in pain, so talk to your vet if you think there might be something wrong. If kitty is just rambunctious at night, you can help tire and relax her with a good play session before bedtime. Make sure kitty's environment is enriched so there is plenty to do during the day, making your cat more inclined to sleep at night. You might create a cat enclosure; offer your cat a variety of toys; mount bird or squirrel feeders near a window out which kitty can see; or leave out items for your cat to explore, such as boxes, bags, and packing paper.",
-        img: 'https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/LWMPlNc/two-cute-domestic-shorthair-tabby-kittens-cats-playing-with-feline-toy_bw91ebii__F0011.png'
+        img: 'https://www.catster.com/wp-content/uploads/2018/03/GettyImages-1152049636.jpg'
       }, {
         title: 'Cats That Put The “Scared” in “Scaredy Cat.”',
         description: "Cats are independent, but they are also social creatures by nature. Your shy kitty may never be the life of the party, but your dreams of feline cuddle time may still come true.",
@@ -46,7 +46,7 @@ router.get('/seed', (req, res) => {
         title: 'Chronic Stress in Cats',
         description: "Chronic stress occurs when the cat is left in a state of uncertainty. Think of a cat forced to live every day with another cat who displays constant hostility, or a cat living in an environment where the litter box conditions are dirty and unappealing. What about the cat confined to a cage in a shelter for months? Can you imagine the degree of chronic stress there? Or what about the indoor/outdoor cat who has moved to a new neighborhood and is put outside every day with no safe retreat back to the security of his home? These are just a couple of examples but there are so many other situations that could create stress.",
         treatment: "Help your cat get comfortable with the cat carrier so car travel won’t be so frightening. Take your cat to a veterinary clinic that has worked to create a cat-friendly practice. Address multicat tension issues now, before they get any worse. Make sure there are adequate resources for each cat to reduce competition and guarding. Maintain good litter box hygiene. Create environmental enrichment in the home. Socialize your cat. Ease your cat through life transitions rather than make abrupt changes. Maintain your cat’s veterinary care. Engage your cat in daily interactive play sessions.Do gradual, positive new pet introductions. Provide good quality nutrition.",
-        img:'https://cf-s3.petcoach.co/thumbnails/article/uploads/articles/59/0923b56b804d33318d71d5b948ca5990f49612d8.jpeg'
+        img:'https://cdn.shopify.com/s/files/1/0011/0552/articles/stress_blog_718x.jpg?v=1512163928'
       }
     ], (err, data) => {
       res.redirect('/behaviors')

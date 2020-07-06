@@ -113,11 +113,7 @@ th {
 }
 
 .main-nav-wrap ul li:hover {
-	background: #f50057;
-}
-
-.main-nav-wrap ul li a:hover {
-	background: #f50057;
+	/* background: #414C5A; */
 }
 
 .main-nav-wrap ul ul {
@@ -137,11 +133,14 @@ th {
 }
 
 .submenu a {
-  color: #333333!important;
+  color: #333333;
   margin: 0;
   padding: 0;
 }
 
+.submenu a:hover {
+  text-decoration: underline;
+}
 
 /* INDEX BACKGROUND IMG */
 .main {
