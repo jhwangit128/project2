@@ -1,25 +1,26 @@
 <div class="navbar">
     <div class="nav-wrap">
       <div class="nav-top">
-        <div class= "meow-logo">
-        <div class="signup-login">
-          <ul>
-            <li>
-              <% if(currentUser) {%>
-                Welcome <%= currentUser.username %>
-            </li>
-            <li>
-              <form action="/sessions?_method=DELETE" method="POST">
-                <input type="submit" value="Logout" class="waves-effect waves-light btn blue-grey">
-              </form>
-            </li>
-            <li>
-              <% } else { %>
-                <a href="/users/new" class="sign-up-btn waves-effect waves-light btn blue-grey">Sign Up</a>
-                <a href="/sessions/new" class="log-in-btn waves-effect waves-light btn blue-grey">Log In</a>
-                <% } %>
-            </li>
-          </ul>
+        <div class= "meow-logo" onclick="document.location='/'">
+          <div class="signup-login">
+            <ul>
+              <li>
+                <% if(currentUser) {%>
+                  Welcome <%= currentUser.username %>
+              </li>
+              <li>
+                <form action="/sessions?_method=DELETE" method="POST">
+                  <input type="submit" value="Logout" class="waves-effect waves-light btn blue-grey">
+                </form>
+              </li>
+              <li>
+                <% } else { %>
+                  <a href="/users/new" class="sign-up-btn waves-effect waves-light btn blue-grey">Sign Up</a>
+                  <a href="/sessions/new" class="log-in-btn waves-effect waves-light btn blue-grey">Log In</a>
+                  <% } %>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

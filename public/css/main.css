@@ -1,4 +1,6 @@
+/***********/
 /* GENERAL */
+/***********/
 body {
   font-family: 'Rubik', sans-serif;
 }
@@ -22,8 +24,9 @@ th {
   padding-bottom: 15px;
 }
 
-
+/********/
 /* LOGO */
+/********/
 .meow-logo {
   width: 100%;
   height: 100px;
@@ -33,21 +36,13 @@ th {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18%;
+  cursor: pointer;
 }
 
-/* .meow-logo img {
-  width: 100%;
-  margin-top: 20px;
-  display: inline-block;
-  transition: transform 0.5s ease, border 0.5s ease;
-} */
-
-/* .meow-logo img:hover {
-  transform: scale(1.1);
-} */
-
-
+/**************/
 /* TOP NAVBAR */
+/**************/
+
 /* big container */
 .navbar {
   text-align: center;
@@ -68,7 +63,9 @@ th {
   justify-content: flex-end;
 }
 
+/*******************/
 /* DROPDOWN NAVBAR */
+/*******************/
 .main-nav-wrap {
   width: 100%;
   height: 50px;
@@ -142,13 +139,16 @@ th {
   text-decoration: underline;
 }
 
+/************************/
 /* INDEX BACKGROUND IMG */
+/************************/
 .main {
   width: 100%;
   height: 830px;
   background: url('https://images.unsplash.com/photo-1558979846-df919038fb4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80');
   background-repeat: no-repeat;
-  background-size:  cover;
+  background-size: contain;
+  background-size: cover;
   bottom: 0px;
 }
 
@@ -159,9 +159,9 @@ th {
   padding-bottom: 100px;
 }
 
-
+/****************/
 /* LOGIN SIGNUP */
-
+/****************/
 .signup-login {
   margin: 10px 10px 0 0;
   float: right;
@@ -194,8 +194,9 @@ th {
   padding-top: 20px;
 }
 
-
+/************/
 /* BEHAVIOR */
+/************/
 .behavior-container, .items-container {
   width: 100%;
   display: flex;
@@ -240,8 +241,9 @@ th {
   margin-bottom: 20px;
 }
 
-
+/*********/
 /* STORE */
+/*********/
 .store-btn {
   float: left;
 }
@@ -291,8 +293,9 @@ th {
   width: 40%;
 }
 
-
+/***********/
 /* SHELTER */
+/***********/
 .shelter-img img {
   width: 50%;
 }
@@ -313,7 +316,10 @@ th {
 .shelter-font {
   font-size: 24px;
 }
+
+/*************/
 /* COMMUNITY */
+/*************/
 .post-btn {
   width: 100%;
   text-align: left;
@@ -375,7 +381,10 @@ th {
 .community-title:hover {
   color: gray;
 }
+
+/*******************/
 /* BUTTONS STYLING */
+/*******************/
 input[type="submit"] {
   height: 30px;
   border: 0px;
@@ -408,8 +417,9 @@ input[type="text"], input[type="number"], input[type="textarea"], input[type="im
   border-radius: 5px;
 }
 
-
+/**********************/
 /* EVERY TEXT STYLING */
+/**********************/
 .description {
   resize: none;
   width: 100%;
@@ -425,8 +435,9 @@ img {
   border-radius: 3px;
 }
 
-
+/**********/
 /* FOOTER */
+/**********/
 .wrap {
   width: 100%;
   display: flex;
